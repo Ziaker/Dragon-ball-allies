@@ -1,5 +1,4 @@
-;===============================================================================
-;----------------------Supers-----------------------------------------------
+; Edit 1 - Fixed State 1433 and state 3000 movehit problems, the character was getting moved to the left and turned out instead of keeping in the place, in front of freeza during the move
 ;-------------------------------------------------------------------------------
 [Statedef 242]
 type    = A
@@ -118,6 +117,12 @@ physics = N
 ctrl = 0
 anim = 433
 sprpriority = 0
+
+[State 0, PlayerPush]
+type = PlayerPush
+trigger1 = 1
+value = 1 
+ignorehitpause = 1
 
 [State 0, VelMul]
 type = VelMul
@@ -240,13 +245,13 @@ volume = 999
 
 [State 200, 1]
 type = HitDef
-TriggerAll = hitcount < 17;time < 180
-trigger1 = timemod = 5,0
+TriggerAll = hitcount < 14;time < 180
+trigger1 = timemod = 3,0
 attr = A, SP
 animtype  = Heavy
 damage    = 4
 guardflag = MA
-pausetime = 2,3
+pausetime = 1,3
 sparkno = -1
 guard.sparkno = -1 ;s7000
 sparkxy = -8,-0
@@ -258,6 +263,31 @@ ground.hittime  = 15
 ground.velocity = -4
 air.velocity = -3,-2
 Fall = 0
+Getpower = 0,0
+sprpriority = 3
+envshake.time = 3
+
+
+[State 200, 1]
+type = HitDef
+Trigger1 = hitcount >= 14;time < 180
+ attr = A, SP
+animtype  = Heavy
+damage    = 4
+guardflag = MA
+pausetime = 1,3
+sparkno = -1
+guard.sparkno = -1 ;s7000
+sparkxy = -8,-0
+hitsound   = S1,2
+guardsound = S4,1 ;S4,1
+ground.type = High
+ground.slidetime = 12
+ground.hittime  = 15
+ground.velocity = -4
+air.velocity = -3,-2
+Fall = 0
+p2stateno = 425
 Getpower = 0,0
 sprpriority = 3
 envshake.time = 3
@@ -280,22 +310,6 @@ trigger1 = animelem = 4
 value = S350,3
 volume = 999
 ignorehitpause = 1
-
-[State 0, TargetBind]
-type = TargetBind
-triggerall = hitcount <= 15
-trigger1 = movehit = 1
-time = 1
-id = -1
-facing = -1
-pos = 40,-20
-
-[State 0, TargetState]
-type = TargetState
-triggerall = hitcount = [15,17]
-trigger1 = movehit = 1
-value = 425
-ID = -1
 
 [State 200, Hit Spark]
 type = Explod
@@ -421,6 +435,14 @@ type = Pause
 trigger1 = time = [0,5]
 time = 2
 
+[State 0, TargetState]
+type = TargetState
+triggerall = time > 120 
+trigger1 = movehit = 1
+trigger2 = hitcount = 15
+value = 425
+ID = -1
+ignorehitpause = 1
 
 [State 200, End]
 type = ChangeState
@@ -541,6 +563,9 @@ anim = -1
 sound = -1
 pos = 9999,9999
 unhittable = 1
+ignorehitpause = 1
+supermovetime = 999
+pausemovetime = 999
 darken = 0
 
 [State 0, VarSet]
@@ -555,12 +580,18 @@ triggerall = var(12) < 0
 trigger1 = time >= 180
 v = 12
 value = 10
+ignorehitpause = 1
+supermovetime = 999
+pausemovetime = 999
 
 [State 0, BGPalFX]
 type = BGPalFX
 trigger1 = time < 190
 time = 1
 add = var(12),var(12),var(12)
+ignorehitpause = 1
+supermovetime = 999
+pausemovetime = 999
 
 [State 0, Super Charge]
 type = Explod
@@ -727,7 +758,7 @@ ownpal = 1
 [State 0, VelSet]
 type = VelSet
 trigger1 = time > 60
-x = 20
+x = 15
 
 [State 0, PlaySnd]
 type = PlaySnd
@@ -748,7 +779,7 @@ attr = A, SP
 animtype  = Heavy
 damage    = 2
 guardflag = MA
-pausetime = 0,0
+pausetime = 1,9
 sparkno = -1
 guard.sparkno = -1 ;s7000
 sparkxy = -8,-0
@@ -772,7 +803,7 @@ attr = A, SP
 animtype  = Heavy
 damage    = 2
 guardflag = MA
-pausetime = 0,0
+pausetime = 1,9
 sparkno = -1
 guard.sparkno = -1 ;s7000
 sparkxy = -8,-0
@@ -787,22 +818,24 @@ Fall = 1
 Getpower = 0,0
 envshake.time = 20
 
-[State 0, TargetBind]
-type = TargetBind
-trigger1 = movehit = 1
-time = 2
-id = -1
-pos = 40,-20
-
 [State 0, TargetState]
 type = TargetState
-triggerall = hitcount >= 10;enemy,backedgedist < 30
+triggerall = hitcount >= 15;enemy,backedgedist < 30
 trigger1 = movehit = 1
 value = 425
 ID = -1
-;ignorehitpause =
-;persistent =
 
+[State 0, PlayerPush]
+type = PlayerPush
+trigger1 = 1
+value = 1
+ ignorehitpause =  1
+
+[State 0, VelSet]
+type = VelSet
+trigger1 = movehit = 1
+x = -10
+ignorehitpause = 1
 
 [State 200, Hit Spark]
 type = Explod
@@ -5527,6 +5560,4 @@ type = Selfstate
 trigger1 = time = 600
 value = ifelse(life = 0,5150,5120)
 ctrl = 1
-
-
 ;-------------------------------------------------------------------------------
