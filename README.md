@@ -11,7 +11,7 @@ Krillin, Freeza, Kid buu, Nappa, Trunks
 -----------
 ### In works: Raditz, Vegeta, Cell
 ----------
-### ALL the characters were originally edited by malusardimugen and mikel8888, everything else, advanced.cns, teleport.cns, effects.cns and etc are made and edited by me.
+### ALL the characters were originally edited by malusardimugen, CobraG6 and mikel8888, everything else, advanced.cns, teleport.cns, effects.cns and etc are made and edited by me.
 If you want to play the actual version at moment, download at: https://drive.google.com/file/d/1AcRcO0u5rAfMiniNLpmcT69_90Li5RrH/view?usp=drive_link
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### Controls - - - - 
