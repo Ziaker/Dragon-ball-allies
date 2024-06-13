@@ -1,0 +1,22 @@
+<#ffff00>:Basics:</>
+
+Combo 1					^A_+^A_+^A_+^A
+Combo 2					^B_+^B_+^B_+^B
+Grab Armor				^Z
+Power Charge				^Y
+Vanish					^X
+Strong Hit				_F_+^X
+Aerial Hit				_D_+^X
+
+<#00f000>:Specials:</>
+
+Neutral Special				^C
+Side Special				_F_+^C
+Down Special				_D_+^C(_AIR_OK)
+Z Special				_D_+^Z
+
+<#ff8080>:Supers:</>
+
+Super 1					_D_DF_F_+^A
+Super 2					_D_DF_F_+^B(_AIR_OK)
+Super 3					_D_DF_F_+^C
