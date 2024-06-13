@@ -1,6 +1,8 @@
 # M.U.G.E.N Dragon-ball-allies - - - - Ver 0.5
 inspired on Dragon Ball advanced adventure VS mode gameplay.
-The game is in its starting version and everytime time i add a new character, the version number will increase by 1.
+
+The game is in very alpha version and everytime time i add a new character, the version number will increase by 1.
+
 The characters are choosen based on how much animations they have from the original 3ds game and i'm not putting fan versions based on the style (like android 21 one (unless she has good ammount of anims). 
 -----------------------------------------------------------------------
 ### Playable Characters at moment:
