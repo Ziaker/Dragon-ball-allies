@@ -13,7 +13,9 @@ Krillin, Freeza, Kid buu, Nappa, Trunks
 ----------
 ### ALL the characters were originally edited by malusardimugen, CobraG6 and mikel8888, everything else, advanced.cns, teleport.cns, effects.cns and etc are made and edited by me.
 If you want to play the actual version at moment, download at: https://drive.google.com/file/d/1AcRcO0u5rAfMiniNLpmcT69_90Li5RrH/view?usp=drive_link
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### To update the game, download the folders and place them in the original location, overwriting the files that are already there.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### Controls - - - - 
 A = Combo 1 // Air combo 1
 
