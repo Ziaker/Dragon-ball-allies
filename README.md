@@ -7,8 +7,13 @@ If you want to play the actual version at moment, download at: https://drive.goo
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### Controls - - - - 
 A = Combo 1 // Air combo 1
+
 S = Combo 2 // Air combo 1/2
+
 D = Special  // FWD - Side special // DOWN - Down Special // BACK - Back special /// Same for AIR
+
 Z = Charge hit // DOWN - Overhead
+
 X = Recovery
+
 C = Teleport Hammer (Consume one gem) 
