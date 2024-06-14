@@ -1,4 +1,31 @@
 
+[State 0, VelSet]
+type = VelSet
+triggerall = enemy,numhelper(833) = 1
+triggerall = p2bodydist X <= 60
+trigger1 = (stateno = [200,2000]) && movehit = 1
+x = -4
+ignorehitpause = 1
+
+[State 0, NotHitBy]
+type = NotHitBy
+trigger1 = numhelper(833) = 1
+value = SCA,NA,SA,HA,NP,SP,HP,NT,ST,HT
+ignorehitpause = 1
+supermovetime = 999
+pausemovetime = 999
+
+[State 0, PalFXWiz]
+type = PalFX
+trigger1 = numhelper(833) = 1 && time <= 1
+time = 5
+add = 40,-10,-200
+mul = 256,256,256
+sinadd = 40,30,0,6
+invertall = 0
+color = 0
+
+
 ;===============================================================================
 ; ;Clash vs DBZ - Start:
 ;-------------------------------------------------------------------------------
