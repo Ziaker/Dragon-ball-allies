@@ -1,4 +1,6 @@
-
+; --------------------------------------------------------------------
+; AI part
+; --------------------------------------------------------------------
 [State 0, VelSet]
 type = VelSet
 triggerall = enemy,numhelper(833) = 1
@@ -25,6 +27,132 @@ sinadd = 40,30,0,6
 invertall = 0
 color = 0
 
+--------------------------------------------------------------------------------
+; Advanced.cns part
+
+;-------------------------------------------------------------------------------
+; Escudo Invisible
+[Statedef 833]
+type    = A
+movetype= I
+physics = N
+juggle  = 1
+anim = 80034
+
+[State 0, PlayerPush]
+type = PlayerPush
+trigger1 = 1
+value = 1
+
+[State 0, BindToRoot]
+type = BindToRoot
+trigger1 = 1
+pos = 0,0
+
+[State 0, HitOverride]
+type = HitOverride
+trigger1 = 1
+attr = SCA,NA,SA,HA,NP,SP,HP,NT,ST,HT
+stateno = 834
+ignorehitpause = 1
+
+[State 200, End]
+type = Destroyself
+triggerall = time > 20
+trigger1 = root,stateno != 840
+trigger2 = numhelper(833) > 1
+;-------------------------------------------------------------------------------
+; Escudo Invisible Golpeado
+[Statedef 834]
+type    = A
+movetype= H
+physics = N
+juggle  = 1
+velset = 0,0
+anim = 80034 
+
+[State 0, PlayerPush]
+type = PlayerPush
+trigger1 = 1
+value = 1
+
+[State 0, Explod]
+type = Explod
+trigger1 = time = 0
+anim = 80033
+ID = 80033
+pos = 40,-40
+postype = p1
+bindtime = 1
+removetime = -2
+scale = .65,.85;.375,.525
+sprpriority = 10
+ownpal = 1
+ontop = 1
+ignorehitpause = 1
+supermovetime = 999
+pausemovetime = 999
+
+
+[State 0, Pause]
+type = Pause
+trigger1 = time = 1;[1,4]
+time = 5
+movetime = 0
+endcmdbuftime = 5
+
+[State 0, PlaySnd]
+type = PlaySnd
+trigger1 = time = 0
+value = S1,27
+volume = 999
+ignorehitpause = 1
+
+[State 0, VarSet]
+type = ParentVarSet
+trigger1 = time = 0
+v = 6
+value = gethitvar(damage)
+ignorehitpause = 0
+
+[State 0, VarSet]
+type = ParentVarSet
+trigger1 = time = 1
+v = 6
+value = 0
+ignorehitpause = 0
+
+[State 0, AssertSpecial]
+type = AssertSpecial
+trigger1 = 1
+ignorehitpause = 1
+persistent = 1
+flag = noautoturn
+
+[State 0, BindToRoot]
+type = BindToRoot
+trigger1 = 1
+pos = 0,0
+
+[State 0, HitOverride]
+type = HitOverride
+trigger1 = 1
+attr = SCA,NA,SA,HA,NP,SP,HP,NT,ST,HT
+stateno = 835
+ignorehitpause = 1
+
+[State 200, End]
+type = changestate
+trigger1 = hitover
+value = 835
+;-------------------------------------------------------------------------------
+; Escudo Invisible destroy
+[Statedef 835]
+anim = 9999
+[State 200, End]
+type = destroyself
+trigger1 = time = 1
+;-------------------------------------------------------------------------------
 
 ;===============================================================================
 ; ;Clash vs DBZ - Start:
