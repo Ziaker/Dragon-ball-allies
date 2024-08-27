@@ -1,4 +1,4 @@
-# M.U.G.E.N Dragon-ball-allies - - - - Ver 0.6
+# M.U.G.E.N Dragon-ball-allies - - - - Ver 0.8
 inspired on Dragon Ball advanced adventure VS mode gameplay.
 
 The game is in very alpha version and everytime time i add a new character, the version number will increase by 1.
@@ -7,9 +7,9 @@ The characters are choosen based on how much animations they have from the origi
 
 -----------------------------------------------------------------------
 ### Playable Characters at moment:
-Krillin, Freeza, Kid buu, Nappa, Trunks, Majin Buu (New)
+Krillin, Freeza, Kid buu, Nappa, Trunks, Majin Buu, Bills, Raditz (New)
 -----------
-### Next: Beerus
+### Next: Cell
 ----------
 ### ALL the characters were originally edited by malusardimugen, CobraG6 and mikel8888, everything else, advanced.cns, teleport.cns, effects.cns and etc are made and edited by me.
 If you want to play the actual version at moment, download at: https://drive.google.com/file/d/1AcRcO0u5rAfMiniNLpmcT69_90Li5RrH/view?usp=drive_link
